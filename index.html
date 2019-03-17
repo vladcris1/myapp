@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>learn javascript?</title>
+	<link rel="stylesheet"  href="style.css"/>
+	<script src="main.js"></script>
+</head>
+
+<body >
+	<div class="header">
+		<h1 id="heading" >vlad</h1>
+		<p>cristian</p>
+		
+	</div>
+
+	<div class="container">
+		
+		<button onmouseout="clearDate()" onmouseover="showDate()">Show Date</button>
+		<h1 id="time"></h1>
+	</div>
+
+	<script >
+
+	function showDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = Date();
+	}
+
+	function clearDate(){
+		var time = document.getElementById('time');
+		time.innerHTML = '';
+		}
+	
+	</script>
+	<script>
+		//number
+		//string
+		//array
+		//object
+		// case sensitive
+
+		//var colors = ['red','blue','green'];
+		//var colors1 = new Array('red','blue','green');
+		//colors1[3] = 'black';
+		//colors1.push('purple');
+
+		//alert(colors1[3]);
+		
+		//for( var i = 0; i < 10; i++){
+		//	console.log('vlad are ' +i+ ' mere');
+		//}
+
+		//var i = 0;
+		//while(i < 10){
+		//	console.log(i);
+		//	i++;
+		//}
+
+		//var numbers = [3,33,65,43,2,9];
+		//numbers.reverse();
+		//numbers.forEach(function(numbers){
+		//	console.log(numbers);
+
+		//});
+		//for(var i = 0; i < numbers.length; i++){
+			//console.log(numbers[i]);
+		//}
+
+
+		//object literal
+		var person = {
+
+			firstName: 'Brad',
+			lastName: 'cristian',
+			age: '34',
+			children: ['vlad','mihai'],
+			address: {   //embedded objects
+
+				street: 'sdhfh',
+				city: 'bucuresti',
+				state: 'ma'
+			},
+			fullName: function(){
+				return this.firstName +" "+this.lastName
+			}
+		}
+		//console.log(person.fullName());
+
+
+		//object constructor
+		var apple = new Object();
+		apple.color = 'red';
+		apple.shape = 'round';
+
+		apple.describe = function(){
+			return 'An apple is the color '+this.color+' and is the shape'+this.shape;
+		}
+		//console.log(apple.describe());
+
+
+		//constructor pattern
+		function Fruit(name,color,shape){
+			this.name = name;
+			this.color = color;
+			this.shape = shape;
+
+			this.describe = function(){
+				return 'A '+this.name+' is the color '+ this.color+' and is the shape '+this.shape;
+			}
+		}
+
+		//var apple = new Fruit('apple', 'red', 'round');
+		var melon = new Fruit('melon', 'green', 'round');
+		console.log(melon.describe());
+
+
+
+
+	</script>
+</body>
+
+</html>
